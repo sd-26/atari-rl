@@ -1,0 +1,35 @@
+[32m[1214 13:43:25 @logger.py:90][0m Argv: ./DQN.py --env breakout.bin
+[32m[1214 13:43:25 @expreplay.py:41][0m Creating experience replay buffer of 6.6 GB ... use a smaller buffer if you don't have enough CPU memory.
+[32m[1214 13:43:25 @input_source.py:222][0m Setting up the queue 'QueueInput/input_queue' for CPU prefetching ...
+[32m[1214 13:43:25 @trainers.py:47][0m Building graph for a single training tower ...
+[32m[1214 13:43:25 @registry.py:90][0m 'conv0': [?, 84, 84, 4] --> [?, 21, 21, 32]
+[32m[1214 13:43:25 @registry.py:90][0m 'conv1': [?, 21, 21, 32] --> [?, 11, 11, 64]
+[32m[1214 13:43:25 @registry.py:90][0m 'conv2': [?, 11, 11, 64] --> [?, 11, 11, 64]
+[32m[1214 13:43:25 @registry.py:90][0m 'fc0': [?, 11, 11, 64] --> [?, 512]
+[32m[1214 13:43:25 @registry.py:90][0m 'fct': [?, 512] --> [?, 4]
+[32m[1214 13:43:25 @registry.py:90][0m 'target/conv0': [?, 84, 84, 4] --> [?, 21, 21, 32]
+[32m[1214 13:43:25 @registry.py:90][0m 'target/conv1': [?, 21, 21, 32] --> [?, 11, 11, 64]
+[32m[1214 13:43:25 @registry.py:90][0m 'target/conv2': [?, 11, 11, 64] --> [?, 11, 11, 64]
+[32m[1214 13:43:25 @registry.py:90][0m 'target/fc0': [?, 11, 11, 64] --> [?, 512]
+[32m[1214 13:43:25 @registry.py:90][0m 'target/fct': [?, 512] --> [?, 4]
+[32m[1214 13:43:26 @model_utils.py:67][0m [36mList of Trainable Variables: 
+[0mname               shape             #elements
+-----------------  --------------  -----------
+conv0/W            [8, 8, 4, 32]          8192
+conv0/b            [32]                     32
+conv0/prelu/alpha  []                        1
+conv1/W            [4, 4, 32, 64]        32768
+conv1/b            [64]                     64
+conv1/prelu/alpha  []                        1
+conv2/W            [3, 3, 64, 64]        36864
+conv2/b            [64]                     64
+conv2/prelu/alpha  []                        1
+fc0/W              [7744, 512]         3964928
+fc0/b              [512]                   512
+fct/W              [512, 4]               2048
+fct/b              [4]                       4[36m
+Number of trainable variables: 13
+Number of parameters (elements): 4045479
+Storage space needed for all trainable variables: 15.43MB[0m
+[32m[1214 13:43:26 @base.py:209][0m Setup callbacks graph ...
+[32m[1214 13:43:26 @DQNModel.py:116][0m Target Network Update: target/conv0/W <- conv0/W

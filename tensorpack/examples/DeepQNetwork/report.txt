@@ -1,0 +1,81 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 6 files
+Detected 1 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: DeepQNetwork/DQNModel.py
+--------------------------------------------------------------------------------
+DeepQNetwork/DQNModel.py:102:13: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'DeepQNetwork/'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'DeepQNetwork/common.py'
+ outputting to 'DeepQNetwork_v2/common.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'DeepQNetwork/expreplay.py'
+ outputting to 'DeepQNetwork_v2/expreplay.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'DeepQNetwork/atari.py'
+ outputting to 'DeepQNetwork_v2/atari.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'DeepQNetwork/DQNModel.py'
+ outputting to 'DeepQNetwork_v2/DQNModel.py'
+--------------------------------------------------------------------------------
+
+74:28: INFO: Added keywords to args of function 'tf.reduce_sum'
+75:26: INFO: Added keywords to args of function 'tf.reduce_mean'
+75:41: INFO: Added keywords to args of function 'tf.reduce_max'
+79:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+84:21: INFO: Added keywords to args of function 'tf.reduce_max'
+88:33: INFO: Added keywords to args of function 'tf.argmax'
+90:21: INFO: Added keywords to args of function 'tf.reduce_sum'
+94:15: INFO: tf.losses.huber_loss requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+94:15: INFO: Renamed 'tf.losses.huber_loss' to 'tf.compat.v1.losses.huber_loss'
+95:49: INFO: Renamed 'tf.losses.Reduction.MEAN' to 'tf.compat.v1.losses.Reduction.MEAN'
+102:13: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+102:13: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+103:8: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+103:8: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+104:14: INFO: Renamed 'tf.train.RMSPropOptimizer' to 'tf.compat.v1.train.RMSPropOptimizer'
+109:15: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+111:12: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'DeepQNetwork/atari_wrapper.py'
+ outputting to 'DeepQNetwork_v2/atari_wrapper.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'DeepQNetwork/DQN.py'
+ outputting to 'DeepQNetwork_v2/DQN.py'
+--------------------------------------------------------------------------------
+
+98:31: INFO: Added keywords to args of function 'tf.reduce_mean'
+98:31: INFO: Renamed keyword argument for tf.reduce_mean from keep_dims to keepdims
+--------------------------------------------------------------------------------
+
